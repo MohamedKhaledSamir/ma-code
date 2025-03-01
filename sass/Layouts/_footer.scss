@@ -1,0 +1,178 @@
+@use '../Abstracts/mixins' as*;
+@use '../Abstracts/variables' as*;
+footer{
+    margin-top: 150px;
+    padding-inline: 7%;
+    padding-bottom: 40px;
+position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 75%;
+        background-color: $black;
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+    }
+    
+    @include device("mob and tab"){
+        padding-inline: 6%;
+    }
+    .box{
+        background-color: $main-color;
+        color: $black;
+        padding-inline: 30px;
+        border-radius: 20px;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-block: 45px;
+        box-shadow: 0 0px 40px 0px $main-color;
+
+        @include device("mob"){
+            padding-inline: 5px;
+            
+        }
+
+        .text{
+
+            max-width:80%;
+            text-align: center;
+
+            .heading{
+                font-size: 35px;
+                font-family: "Source Code Pro",serif;
+                font-weight: bolder;
+            margin-bottom: 10px;
+
+            @include device("mob"){
+                font-size: 25px;
+            }
+            }
+    
+            .sub-heading{
+
+                font-size: 20px;
+                font-weight: lighter;
+                margin-bottom: 30px;
+    
+            }
+        }
+
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+
+            @include device("mob"){
+                flex-direction: column;
+            }
+
+            .main-button{
+                color: white;
+                padding-inline: 20px;
+                gap: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .image{
+                    width: 30px;
+                    height: 15px;
+                    img{
+                        object-fit: contain;
+                    }
+                }
+                &:nth-child(1){
+                    background-color: #01010132;
+                    padding-inline: 40px;
+                }
+                
+                &:nth-child(2){
+                    background-color: $black;
+
+                }
+
+            }
+        }
+
+    }
+
+    .links{
+        margin-top: 100px;
+        color: $white;
+        .logo-nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid $gray;
+            padding-bottom: 40px;
+            @include device("mob and tab"){
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .logo{
+
+                display: flex;align-items: center;
+justify-content: center;
+gap: 20px;
+
+    font-size: 30px;
+                img{
+                width: 32px;
+                height: 32px;
+                }
+
+    
+
+            }
+
+            .nav{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                font-size: 23px;
+                @include device("mob"){
+                    flex-direction: column;
+                }
+                a{
+                    color: $white;
+                    font-weight: lighter;
+                }
+            }
+        }
+
+        .social-copyright{
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include device("mob"){
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+            }
+
+            .social{
+                width: fit-content;
+                height: fit-content;
+            }
+
+            .copyright{
+                font-weight: 100;
+
+                span{
+                    color: $main-color;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use '../Components/package-card';
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
+#packages{
+
+    margin-block: 120px;
+    text-align: center;
+
+    .title{
+
+        font-size: 35px;
+        margin-bottom: 20px;
+
+    }
+
+ 
+    
+    .cards{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        @include device("mob"){
+            
+            gap: 60px;
+        }
+    }
+
+
+}

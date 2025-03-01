@@ -1,0 +1,85 @@
+@use '../Abstracts/variables' as *; 
+@use '../Abstracts/mixins' as *; 
+#ad{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+
+    @include device("mob and tab"){
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+
+    .image{
+       min-width: 50%;
+        height: 380px;
+        img{
+            object-fit: contain;
+        }
+    }
+
+    .text-button{
+        width: 30%;
+        @include device("mob and tab"){
+
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 20px;
+
+        }
+    
+        .ad-title{
+
+
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+
+        }
+        .ad-desc{
+            font-weight: lighter;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .ad-button{
+            background-color: $black;
+            width: fit-content;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            padding-inline: 30px;
+
+            @include device("mob and tab"){
+                margin-top: 10px;
+            }
+
+
+            .text{
+                font-size: 20px;
+                white-space: nowrap;
+            }
+            .image{
+                width: 17px;
+                height: 17px;
+                min-width: unset;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+        }
+    }
+
+}

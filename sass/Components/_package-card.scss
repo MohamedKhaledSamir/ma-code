@@ -1,0 +1,96 @@
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
+#packages{
+ 
+    .card{
+        background: $light-gray;
+
+        padding: 50px;
+
+        border-radius: 5px;
+
+        &:nth-child(2){
+            background-color: $black;
+            color: $white;
+
+            .price-content{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 100%;
+                span{
+                @extend .price;
+
+
+                }
+                img{
+                    width: 40px;
+                    height: 37px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            .items-to-learn{
+
+                line-height: 1.7;
+            }
+
+            button{
+                background-color: $main-color;
+                color: $black;
+            }
+
+        }
+
+        .card-title{
+            margin-bottom: 20px;
+        }
+
+        .price{
+            font-weight: bold;
+            font-size: 30px;
+            position: relative;
+            width: fit-content;
+            margin-inline: auto;
+            margin-bottom: 30px;
+
+            &::before{
+                content: '$';
+                position: absolute;
+                top: 0;
+                left: -17px;
+                font-size: 20px;
+            }
+        }
+
+        .items-to-learn{
+            margin-bottom: 45px;
+            font-size: 15px;
+
+        }
+
+        button{
+            width: 100%;
+            background: $white;
+            color: $main-color;
+            padding-block: 10px;
+            border-radius: 0.5px;
+            box-shadow: 0 0 0.5px $black;
+            transition: 0.3s;
+            font-weight: bold;
+            cursor: pointer;
+            &:hover{
+                background: $main-color;
+                color: $white;
+            }
+        }
+
+    }
+
+
+    
+}

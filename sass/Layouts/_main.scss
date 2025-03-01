@@ -1,0 +1,126 @@
+@use '../Abstracts/mixins' as *;
+@use '../Abstracts/variables' as *;
+@use '../Components/main-button';
+main{
+
+    font-family: 'Source Code Pro',serif;
+
+    display: flex;
+    min-height: 100vh;
+
+    @include device('mob and tab'){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .left-side{
+        padding-top: 82px;
+        background-color: $light-gray;
+        width: 50%;
+        padding-left: 40px;
+
+        
+
+        
+    @include device('mob and tab'){
+        padding-bottom: 30px;
+        width: 100%;
+    }
+     
+        h1{
+            font-size: 50px;
+            font-weight: 500;
+            margin-top: 140px;
+            padding-inline:30px ;
+        @include device("mob"){
+            padding-inline: 8px;
+            margin-top: 50px;
+            font-size: 40px;
+        }
+
+        }
+    
+
+        .wavy-line{
+            width: 76.84px;
+            height: 74.45px;
+            margin-top: 70px;
+        
+            img{
+                object-fit: contain;
+            }
+        }
+
+
+        .sub-heading{
+            font-size: 15px;
+            max-width: 375px;
+            padding-right: 10px;
+        }
+
+
+        button{
+            background-color: $black;
+
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+
+            .text{
+                font-size: 20px;
+            }
+            .image{
+                width: 17px;
+                height: 17px;
+            }
+
+        }
+
+    }
+    
+    .right-side{
+
+        background-image: url('../../images/main-background.png');
+        width: 50%;
+position: relative;
+
+
+        
+@include device('mob and tab'){
+    width: 100%;
+    height: 100vh;
+        }
+         
+
+
+.developer{
+position: absolute;
+bottom: 0;
+left: -120px;
+
+width: auto;
+height: 72%;
+
+
+img{
+    object-fit: cover;
+
+}
+        }
+
+        .play-icon{
+            width: 194px;
+            height: 194px;
+            position: absolute;
+            bottom: -70px;
+            right: 65px;
+        }
+
+    }
+
+}

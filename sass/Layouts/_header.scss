@@ -1,0 +1,43 @@
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
+header{
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    font-family: 'Source Code Pro', serif;
+    padding: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    
+    
+    
+   
+
+    .logo{
+        width: 32px;
+        height: 32px;
+
+    }
+
+    nav{
+
+        @include device("mob"){
+            display: none;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            a{
+                color: $black;
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+    }
+
+}

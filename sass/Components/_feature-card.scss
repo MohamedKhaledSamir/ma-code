@@ -1,0 +1,49 @@
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
+.feature-card{
+    box-shadow: 0  0 1.2px $black;
+
+    padding-left: 35px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: $off-white;
+    border-radius: 10px;
+    display: inline-block;
+
+
+@include device("mob"){
+    min-width: 90%;
+    padding: 40px;
+}
+
+
+
+
+}
+
+.image-icon{
+    width: 70px;
+    height: 70px;
+    color: black;
+    margin-bottom: 60px;
+    box-shadow: 0 0 0.85px $black;
+    background-color: $off-white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+    .feature-title{
+        font-size: 30px;
+        white-space: nowrap;
+
+    }
+
+    .feature-desc{
+    max-width: 156px;
+        font-size: 15px;
+        white-space: wrap;
+
+    }
+

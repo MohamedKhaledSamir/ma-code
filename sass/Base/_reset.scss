@@ -1,0 +1,52 @@
+@use '../Abstracts/variables' as *;
+
+
+*,*::before,*::after{
+    margin: 0;padding: 0;
+    box-sizing:border-box;
+    border: none;
+    outline: none;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    letter-spacing: 0.1px;
+    
+    
+}
+
+*,html{
+    scroll-behavior: smooth !important;
+}
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    min-height: 100vh;
+    background-color: $white;
+    font-family: "Cabin", serif;
+    font-style: normal;
+    overflow-x: hidden;
+
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+
+span,a{
+    display: inline-block ;
+
+}
+a {
+    cursor: pointer;
+}

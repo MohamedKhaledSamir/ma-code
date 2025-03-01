@@ -1,0 +1,61 @@
+@use '../Abstracts/mixins' as *;
+@use '../Abstracts/variables' as *;
+@use '../Components/activity-card' as *;
+
+#tutors{
+
+    margin-top: 100px;
+    padding-inline: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include device("mob and tab"){
+        flex-direction: column;
+        justify-content: center;
+        gap: 70px;
+        padding-inline: 40px;
+    }
+
+    .text{
+        h4{
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+
+        .activity-cards{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+           
+
+            
+        }
+
+        
+        
+    }
+    .image{
+        max-width: 50%;
+        position: relative;
+        @include device("mob"){
+            max-width: 100%;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 110%;
+            height: 90%;
+            top: -6%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $black;
+            z-index: -1;
+            border-radius: 10px;
+        }
+    }
+
+
+}
